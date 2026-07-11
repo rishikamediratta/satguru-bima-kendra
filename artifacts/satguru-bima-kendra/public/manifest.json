@@ -1,0 +1,14 @@
+{
+  "name": "Satguru Bima Kendra",
+  "short_name": "Satguru Bima",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#064e3b",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

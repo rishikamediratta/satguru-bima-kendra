@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://satgurubimakendra.example.com/sitemap.xml
