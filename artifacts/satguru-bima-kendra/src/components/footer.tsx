@@ -90,7 +90,7 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-400">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <a href="mailto:rishimehndiratta999@gmail.com" className="hover:text-white transition-colors">rishimehndiratta999@gmail.com</a>
+                <a href="mailto:satgurubima.k@gmail.com" className="hover:text-white transition-colors">satgurubima.k@gmail.com</a>
               </li>
               <li className="flex items-center gap-3 text-sm text-slate-400">
                 <Clock className="w-5 h-5 text-primary shrink-0" />

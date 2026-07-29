@@ -153,7 +153,7 @@ export const businessData = {
   experience: "10+ Years",
   address: "11 Block, Govind Nagar, Kanpur",
   phone: "9506224269",
-  email: "rishimehndiratta999@gmail.com",
+  email: "satgurubima.k@gmail.com",
   hours: "11 AM - 8 PM",
   mapUrl: "https://maps.app.goo.gl/BxdNQSYTnJcPqjM37",
   partners: ["Tata AIG", "Tata AIA", "Niva Bupa", "ICICI Lombard"],

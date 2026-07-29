@@ -240,7 +240,11 @@ export const translations: Record<Language, any> = {
       r5Title: "Affordable Solutions",
       r5Desc: "We analyze multiple plans to find the optimal balance between high coverage and affordable premiums for your budget.",
       r6Title: "Personalized Guidance",
-      r6Desc: "No one-size-fits-all pitches. Your family structure, income, and goals dictate the policy we recommend."
+      r6Desc: "No one-size-fits-all pitches. Your family structure, income, and goals dictate the policy we recommend.",
+      r7Title: "Easy EMI Available",
+      r7Desc: "Get the protection you need today with convenient EMI options that make premium payments easier to manage.",
+      r8Title: "Customizable Plans",
+      r8Desc: "Choose flexible coverage and benefits that can be tailored to your needs, goals, and budget."
     },
     testimonialsPage: {
       title: 'Client Stories',
@@ -295,8 +299,6 @@ export const translations: Record<Language, any> = {
       phonePlaceholder: '+91 98765 43210',
       emailPlaceholder: 'john@example.com',
       messagePlaceholder: 'I would like to know more about health insurance options...',
-      formMissingTitle: "Form configuration missing",
-      formMissingDesc: "Please contact us via phone or WhatsApp instead.",
       sentTitle: "Message Sent!",
       sentDesc: "We will get back to you shortly.",
       errorTitle: "Something went wrong.",
@@ -497,7 +499,11 @@ export const translations: Record<Language, any> = {
       r5Title: "किफायती समाधान",
       r5Desc: "हम आपके बजट के लिए उच्च कवरेज और किफायती प्रीमियम के बीच सर्वोत्तम संतुलन खोजने के लिए कई योजनाओं का विश्लेषण करते हैं।",
       r6Title: "व्यक्तिगत मार्गदर्शन",
-      r6Desc: "सभी के लिए एक जैसी पिच नहीं। आपके परिवार की संरचना, आय और लक्ष्य ही यह तय करते हैं कि हम किस पॉलिसी की सिफारिश करते हैं।"
+      r6Desc: "सभी के लिए एक जैसी पिच नहीं। आपके परिवार की संरचना, आय और लक्ष्य ही यह तय करते हैं कि हम किस पॉलिसी की सिफारिश करते हैं।",
+      r7Title: "आसान ईएमआई उपलब्ध",
+      r7Desc: "सुविधाजनक ईएमआई विकल्पों के साथ आज ही अपनी आवश्यक सुरक्षा प्राप्त करें और प्रीमियम भुगतान को आसान बनाएं।",
+      r8Title: "अनुकूलित योजनाएँ",
+      r8Desc: "अपनी जरूरतों, लक्ष्यों और बजट के अनुसार लचीले कवरेज और लाभों वाली योजना चुनें।"
     },
     testimonialsPage: {
       title: 'ग्राहक अनुभव',
@@ -552,8 +558,6 @@ export const translations: Record<Language, any> = {
       phonePlaceholder: '+91 98765 43210',
       emailPlaceholder: 'email@example.com',
       messagePlaceholder: 'मैं स्वास्थ्य बीमा विकल्पों के बारे में अधिक जानना चाहता हूँ...',
-      formMissingTitle: "फ़ॉर्म कॉन्फ़िगरेशन मौजूद नहीं है",
-      formMissingDesc: "कृपया फोन या व्हाट्सएप के माध्यम से हमसे संपर्क करें।",
       sentTitle: "संदेश भेजा गया!",
       sentDesc: "हम शीघ्र ही आपसे संपर्क करेंगे।",
       errorTitle: "कुछ गलत हो गया।",

@@ -1,6 +1,6 @@
 import { SEOHead } from '@/components/seo-head';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Award, Handshake, Zap, IndianRupee, HeartHandshake } from 'lucide-react';
+import { ShieldCheck, Award, Handshake, Zap, IndianRupee, HeartHandshake, CreditCard, SlidersHorizontal } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n';
 
 export default function WhyChooseUs() {
@@ -36,6 +36,16 @@ export default function WhyChooseUs() {
       title: t('whyChooseUsPage.r6Title'),
       description: t('whyChooseUsPage.r6Desc'),
       icon: <HeartHandshake className="w-8 h-8" />
+    },
+    {
+      title: t('whyChooseUsPage.r7Title'),
+      description: t('whyChooseUsPage.r7Desc'),
+      icon: <CreditCard className="w-8 h-8" />
+    },
+    {
+      title: t('whyChooseUsPage.r8Title'),
+      description: t('whyChooseUsPage.r8Desc'),
+      icon: <SlidersHorizontal className="w-8 h-8" />
     }
   ];
 

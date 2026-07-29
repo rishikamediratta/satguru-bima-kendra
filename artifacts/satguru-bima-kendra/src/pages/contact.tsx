@@ -5,9 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
 import { businessData } from '@/data/content';
-import emailjs from '@emailjs/browser';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -22,14 +20,13 @@ import {
 } from '@/components/ui/form';
 
 const contactSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters"),
-  phone: z.string().min(10, "Valid phone number required"),
+  name: z.string().trim().min(1, "Name is required"),
+  phone: z.string().trim().min(1, "Phone number is required"),
   email: z.string().email("Valid email required").optional().or(z.literal('')),
-  message: z.string().min(10, "Please provide some details about your requirement"),
+  message: z.string(),
 });
 
 export default function Contact() {
-  const { toast } = useToast();
   const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -43,52 +40,14 @@ export default function Contact() {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof contactSchema>) => {
+  const onSubmit = (values: z.infer<typeof contactSchema>) => {
     setIsSubmitting(true);
-    try {
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const message = `New Website Enquiry\n\nName: ${values.name}\nPhone: ${values.phone}\nEmail: ${values.email || 'Not provided'}\nMessage: ${values.message || 'No message'}`;
+    const whatsappUrl = `https://wa.me/91${businessData.phone}?text=${encodeURIComponent(message)}`;
 
-      if (!serviceId || !templateId || !publicKey) {
-        // Graceful degradation if env vars aren't set yet
-        console.warn('EmailJS environment variables not configured.');
-        toast({
-          title: t('contact.formMissingTitle'),
-          description: t('contact.formMissingDesc'),
-          variant: "destructive"
-        });
-        setIsSubmitting(false);
-        return;
-      }
-
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          from_name: values.name,
-          phone_number: values.phone,
-          reply_to: values.email || 'Not provided',
-          message: values.message,
-        },
-        publicKey
-      );
-
-      toast({
-        title: t('contact.sentTitle'),
-        description: t('contact.sentDesc'),
-      });
-      form.reset();
-    } catch (error) {
-      console.error('EmailJS Error:', error);
-      toast({
-        title: t('contact.errorTitle'),
-        description: t('contact.errorDesc'),
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    form.reset();
+    setIsSubmitting(false);
   };
 
   return (
@@ -231,7 +190,7 @@ export default function Contact() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>{t('contact.yourMessage')} <span className="text-destructive">*</span></FormLabel>
+                          <FormLabel>{t('contact.yourMessage')}</FormLabel>
                         <FormControl>
                           <Textarea 
                             placeholder={t('contact.messagePlaceholder')} 
