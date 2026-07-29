@@ -1,4 +1,4 @@
-import { Shield, ShieldAlert, HeartPulse, Baby, PiggyBank, TrendingUp, Car, Bike, Plane } from 'lucide-react';
+import { Shield, ShieldAlert, HeartPulse, Baby, PiggyBank, TrendingUp, Car, Bike, Plane, Building2, CalendarHeart } from 'lucide-react';
 import { ReactNode } from 'react';
 
 export const getServicesData = (t: (key: string) => string) => [
@@ -118,7 +118,33 @@ export const getServicesData = (t: (key: string) => string) => [
       t("services.travel.benefits.3")
     ],
     idealFor: t("services.travel.idealFor"),
-  }
+  },
+  {
+    id: "property-insurance",
+    title: t("services.property.title"),
+    icon: <Building2 className="w-8 h-8" />,
+    description: t("services.property.desc"),
+    benefits: [
+      t("services.property.benefits.0"),
+      t("services.property.benefits.1"),
+      t("services.property.benefits.2"),
+      t("services.property.benefits.3")
+    ],
+    idealFor: t("services.property.idealFor"),
+  },
+  {
+    id: "event-insurance",
+    title: t("services.event.title"),
+    icon: <CalendarHeart className="w-8 h-8" />,
+    description: t("services.event.desc"),
+    benefits: [
+      t("services.event.benefits.0"),
+      t("services.event.benefits.1"),
+      t("services.event.benefits.2"),
+      t("services.event.benefits.3")
+    ],
+    idealFor: t("services.event.idealFor"),
+}
 ];
 
 export const businessData = {
@@ -130,7 +156,7 @@ export const businessData = {
   email: "rishimehndiratta999@gmail.com",
   hours: "11 AM - 8 PM",
   mapUrl: "https://maps.app.goo.gl/BxdNQSYTnJcPqjM37",
-  partners: ["Tata AIG", "Tata AIA", "Niva Bupa", "ICICI Prudential"],
+  partners: ["Tata AIG", "Tata AIA", "Niva Bupa", "ICICI Lombard"],
   social: {
     facebook: "https://www.facebook.com/p/Satguru-Bima-Kendra-100092692543529/",
     instagram: "https://www.instagram.com/satg462bima/",

@@ -201,6 +201,29 @@ export const translations: Record<Language, any> = {
         desc: "Travel the world with peace of mind. Coverage for medical emergencies, flight delays, and lost baggage.",
         benefits: ["Overseas medical expenses", "Trip cancellation/delay cover", "Loss of passport/baggage", "24x7 global assistance"],
         idealFor: "Frequent Travelers, Tourists"
+      },
+      property: {
+        title: "Property Insurance",
+        desc: "Protect your residential, commercial, or rental property against fire, theft, natural calamities, and unforeseen damages.",
+        benefits: [
+          "Coverage against fire & natural disasters",
+          "Protection from burglary & theft",
+          "Building and contents cover",
+          "Quick & hassle-free claim assistance"
+        ],
+        idealFor: "Homeowners, Landlords, Business Owners"
+      },
+
+      event: {
+        title: "Event Insurance",
+        desc: "Safeguard your special events from unexpected cancellations, liabilities, accidents, and financial losses.",
+        benefits: [
+          "Event cancellation & postponement cover",
+          "Public liability protection",
+          "Coverage for equipment & venue damage",
+          "Financial protection against unforeseen risks"
+        ],
+        idealFor: "Wedding Planners, Corporates, Event Organizers"
       }
     },
     whyChooseUsPage: {
@@ -435,6 +458,29 @@ export const translations: Record<Language, any> = {
         desc: "मन की शांति के साथ दुनिया की यात्रा करें। मेडिकल आपात स्थिति, उड़ान में देरी और सामान खोने के लिए कवरेज।",
         benefits: ["विदेशी चिकित्सा खर्च", "यात्रा रद्द/देरी कवर", "पासपोर्ट/सामान खोने पर कवर", "24x7 वैश्विक सहायता"],
         idealFor: "लगातार यात्रा करने वाले, पर्यटक"
+      },
+      property: {
+        title: "संपत्ति बीमा (Property Insurance)",
+        desc: "अपने घर, व्यावसायिक भवन या किराये की संपत्ति को आग, चोरी, प्राकृतिक आपदाओं और अन्य अप्रत्याशित नुकसान से सुरक्षित रखें।",
+        benefits: [
+          "आग और प्राकृतिक आपदाओं से सुरक्षा",
+          "चोरी और सेंधमारी से कवर",
+          "भवन एवं उसमें मौजूद सामान का कवर",
+          "त्वरित और आसान क्लेम सहायता"
+        ],
+        idealFor: "घर के मालिक, मकान मालिक, व्यवसाय के मालिक"
+      },
+
+      event: {
+        title: "इवेंट बीमा (Event Insurance)",
+        desc: "अपने विशेष आयोजनों को अप्रत्याशित रद्द होने, कानूनी देनदारियों, दुर्घटनाओं और वित्तीय नुकसान से सुरक्षित रखें।",
+        benefits: [
+          "इवेंट रद्द होने या स्थगित होने का कवर",
+          "पब्लिक लाइबिलिटी सुरक्षा",
+          "उपकरण और स्थल की क्षति का कवर",
+          "अप्रत्याशित जोखिमों से वित्तीय सुरक्षा"
+        ],
+        idealFor: "विवाह आयोजक, कॉर्पोरेट संस्थाएँ, इवेंट आयोजक"
       }
     },
     whyChooseUsPage: {
