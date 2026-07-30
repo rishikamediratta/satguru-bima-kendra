@@ -1,4 +1,6 @@
 import path from 'path';
+import { cartographer } from '@replit/vite-plugin-cartographer';
+import { devBanner } from '@replit/vite-plugin-dev-banner';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
@@ -22,15 +24,8 @@ function getLocalDevPort() {
 
   return port;
 }
-const basePath = process.env.BASE_PATH;
-
-if (!basePath) {
-  throw new Error(
-    'BASE_PATH environment variable is required but was not provided.',
-  );
-}
-
-export default defineConfig(async ({ command, isPreview }) => ({
+const basePath = process.env.BASE_PATH ?? "/";
+export default defineConfig(({ command, isPreview }) => ({
   base: basePath,
   plugins: [
     react(),
@@ -39,14 +34,10 @@ export default defineConfig(async ({ command, isPreview }) => ({
     ...(process.env.NODE_ENV !== 'production' &&
     process.env.REPL_ID !== undefined
       ? [
-          await import('@replit/vite-plugin-cartographer').then((m) =>
-            m.cartographer({
-              root: path.resolve(import.meta.dirname, '..'),
-            }),
-          ),
-          await import('@replit/vite-plugin-dev-banner').then((m) =>
-            m.devBanner(),
-          ),
+          cartographer({
+            root: path.resolve(import.meta.dirname, '..'),
+          }),
+          devBanner(),
         ]
       : []),
   ],
@@ -64,7 +55,7 @@ export default defineConfig(async ({ command, isPreview }) => ({
   },
   root: path.resolve(import.meta.dirname),
   build: {
-    outDir: path.resolve(import.meta.dirname, 'dist/public'),
+    outDir: path.resolve(import.meta.dirname, 'dist'),
     emptyOutDir: true,
   },
   server: {
